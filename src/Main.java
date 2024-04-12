@@ -3,7 +3,6 @@ public class Main {
         System.out.println("Задача 1");
         double targetAmount = 2_459_000;
         double monthlyContribution = 15000;
-        double interestRate = 0.05;
         double savings = 0;
         int month = 1;
 
