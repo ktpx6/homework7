@@ -8,7 +8,6 @@ public class Main {
         int month = 1;
 
         while (savings < targetAmount) {
-            savings += savings * interestRate / 12;
             savings += monthlyContribution;
             System.out.printf("Месяц %d: сумма накоплений равна %.2f рублей\n", month, savings);
             month++;
@@ -28,16 +27,12 @@ public class Main {
         System.out.println();
 
         System.out.println("Задача 3");
-        int population = 12_000_000;
-        double birthRate = 17;
-        double deathRate = 8;
-        int years = 10;
-
-        for (int year = 1; year <= years; year++) {
-            int populationIncrease = (int) (population * birthRate / 1000) - (int) (population * deathRate / 1000);
-            population += populationIncrease;
-
-            System.out.printf("Год %d: численность населения составляет %d\n", year, population);
+        int people = 12_000_000;
+        int birthrate = 17;
+        int mortality = 8;
+        for (int year = 1; year <= 10; year++) {
+            people += people * (birthrate - mortality) / 1000;
+            System.out.println("Год " + year + ": численность населения состовляет " + people + " человек");
         }
 
         System.out.println("Задача 4");
